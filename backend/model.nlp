@@ -1,0 +1,1060 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "a,do,how,i,in,new,segment,set,sourc,up": {
+            "intent": "segment.setupSource",
+            "domain": "default"
+          },
+          "in,segment,setup,sourc": {
+            "intent": "segment.setupSource",
+            "domain": "default"
+          },
+          "a,can,how,i,in,segment,set,sourc,up": {
+            "intent": "segment.setupSource",
+            "domain": "default"
+          },
+          "a,can,creat,how,i,in,mparticl,profil,user": {
+            "intent": "mparticle.createUser",
+            "domain": "default"
+          },
+          "creat,in,mparticl,profil,user": {
+            "intent": "mparticle.createUser",
+            "domain": "default"
+          },
+          "a,creat,do,how,i,in,mparticl,user": {
+            "intent": "mparticle.createUser",
+            "domain": "default"
+          },
+          "an,audienc,build,do,how,i,in,lytic,segment": {
+            "intent": "lytics.buildAudience",
+            "domain": "default"
+          },
+          "audienc,build,in,lytic,segment": {
+            "intent": "lytics.buildAudience",
+            "domain": "default"
+          },
+          "audienc,creat,in,lytic,segment": {
+            "intent": "lytics.buildAudience",
+            "domain": "default"
+          },
+          "can,data,how,i,integr,my,with,zeotap": {
+            "intent": "zeotap.integrateData",
+            "domain": "default"
+          },
+          "data,integr,with,zeotap": {
+            "intent": "zeotap.integrateData",
+            "domain": "default"
+          },
+          "advanc,configur,segment": {
+            "intent": "segment.advanced",
+            "domain": "default"
+          },
+          "advanc,segment,set": {
+            "intent": "segment.advanced",
+            "domain": "default"
+          },
+          "advanc,integr,mparticl": {
+            "intent": "mparticle.advanced",
+            "domain": "default"
+          },
+          "advanc,configur,mparticl": {
+            "intent": "mparticle.advanced",
+            "domain": "default"
+          },
+          "advanc,configur,lytic": {
+            "intent": "lytics.advanced",
+            "domain": "default"
+          },
+          "advanc,lytic,set": {
+            "intent": "lytics.advanced",
+            "domain": "default"
+          },
+          "advanc,set,zeotap": {
+            "intent": "zeotap.advanced",
+            "domain": "default"
+          },
+          "advanc,configur,zeotap": {
+            "intent": "zeotap.advanced",
+            "domain": "default"
+          },
+          "and,compar,lytic,segment": {
+            "intent": "cross.compare",
+            "domain": "default"
+          },
+          "compar,doe,how,lytic,segment,to": {
+            "intent": "cross.compare",
+            "domain": "default"
+          },
+          "and,compar,mparticl,zeotap": {
+            "intent": "cross.compare",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "segment.setupSource": "default",
+          "mparticle.createUser": "default",
+          "lytics.buildAudience": "default",
+          "zeotap.integrateData": "default",
+          "segment.advanced": "default",
+          "mparticle.advanced": "default",
+          "lytics.advanced": "default",
+          "zeotap.advanced": "default",
+          "cross.compare": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "how do I set up a new source in segment",
+            "intent": "segment.setupSource"
+          },
+          {
+            "domain": "default",
+            "utterance": "setup source in segment",
+            "intent": "segment.setupSource"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can I set up a source in segment",
+            "intent": "segment.setupSource"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can I create a user profile in mparticle",
+            "intent": "mparticle.createUser"
+          },
+          {
+            "domain": "default",
+            "utterance": "create user profile in mparticle",
+            "intent": "mparticle.createUser"
+          },
+          {
+            "domain": "default",
+            "utterance": "how do I create a user in mparticle",
+            "intent": "mparticle.createUser"
+          },
+          {
+            "domain": "default",
+            "utterance": "how do I build an audience segment in lytics",
+            "intent": "lytics.buildAudience"
+          },
+          {
+            "domain": "default",
+            "utterance": "build audience segment in lytics",
+            "intent": "lytics.buildAudience"
+          },
+          {
+            "domain": "default",
+            "utterance": "create audience segment in lytics",
+            "intent": "lytics.buildAudience"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can I integrate my data with zeotap",
+            "intent": "zeotap.integrateData"
+          },
+          {
+            "domain": "default",
+            "utterance": "integrate data with zeotap",
+            "intent": "zeotap.integrateData"
+          },
+          {
+            "domain": "default",
+            "utterance": "data integration with zeotap",
+            "intent": "zeotap.integrateData"
+          },
+          {
+            "domain": "default",
+            "utterance": "advanced segment configuration",
+            "intent": "segment.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "segment advanced settings",
+            "intent": "segment.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "advanced mparticle integrations",
+            "intent": "mparticle.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "mparticle advanced configuration",
+            "intent": "mparticle.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "advanced lytics configurations",
+            "intent": "lytics.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "lytics advanced settings",
+            "intent": "lytics.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "advanced zeotap settings",
+            "intent": "zeotap.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "zeotap advanced configuration",
+            "intent": "zeotap.advanced"
+          },
+          {
+            "domain": "default",
+            "utterance": "compare segment and lytics",
+            "intent": "cross.compare"
+          },
+          {
+            "domain": "default",
+            "utterance": "how does segment compare to lytics",
+            "intent": "cross.compare"
+          },
+          {
+            "domain": "default",
+            "utterance": "compare mparticle and zeotap",
+            "intent": "cross.compare"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "how": 1,
+              "do": 1,
+              "i": 1,
+              "set": 1,
+              "up": 1,
+              "a": 1,
+              "new": 1,
+              "sourc": 1,
+              "in": 1,
+              "segment": 1,
+              "setup": 1,
+              "can": 1,
+              "creat": 1,
+              "user": 1,
+              "profil": 1,
+              "mparticl": 1,
+              "build": 1,
+              "an": 1,
+              "audienc": 1,
+              "lytic": 1,
+              "integr": 1,
+              "my": 1,
+              "data": 1,
+              "with": 1,
+              "zeotap": 1,
+              "advanc": 1,
+              "configur": 1,
+              "compar": 1,
+              "and": 1,
+              "doe": 1,
+              "to": 1
+            },
+            "intents": {
+              "segment.setupSource": 1,
+              "mparticle.createUser": 1,
+              "lytics.buildAudience": 1,
+              "zeotap.integrateData": 1,
+              "segment.advanced": 1,
+              "mparticle.advanced": 1,
+              "lytics.advanced": 1,
+              "zeotap.advanced": 1,
+              "cross.compare": 1
+            },
+            "intentFeatures": {
+              "segment.setupSource": {
+                "how": 1,
+                "do": 1,
+                "i": 1,
+                "set": 1,
+                "up": 1,
+                "a": 1,
+                "new": 1,
+                "sourc": 1,
+                "in": 1,
+                "segment": 1,
+                "setup": 1,
+                "can": 1
+              },
+              "mparticle.createUser": {
+                "how": 1,
+                "can": 1,
+                "i": 1,
+                "creat": 1,
+                "a": 1,
+                "user": 1,
+                "profil": 1,
+                "in": 1,
+                "mparticl": 1,
+                "do": 1
+              },
+              "lytics.buildAudience": {
+                "how": 1,
+                "do": 1,
+                "i": 1,
+                "build": 1,
+                "an": 1,
+                "audienc": 1,
+                "segment": 1,
+                "in": 1,
+                "lytic": 1,
+                "creat": 1
+              },
+              "zeotap.integrateData": {
+                "how": 1,
+                "can": 1,
+                "i": 1,
+                "integr": 1,
+                "my": 1,
+                "data": 1,
+                "with": 1,
+                "zeotap": 1
+              },
+              "segment.advanced": {
+                "advanc": 1,
+                "segment": 1,
+                "configur": 1,
+                "set": 1
+              },
+              "mparticle.advanced": {
+                "advanc": 1,
+                "mparticl": 1,
+                "integr": 1,
+                "configur": 1
+              },
+              "lytics.advanced": {
+                "advanc": 1,
+                "lytic": 1,
+                "configur": 1,
+                "set": 1
+              },
+              "zeotap.advanced": {
+                "advanc": 1,
+                "zeotap": 1,
+                "set": 1,
+                "configur": 1
+              },
+              "cross.compare": {
+                "compar": 1,
+                "segment": 1,
+                "and": 1,
+                "lytic": 1,
+                "how": 1,
+                "doe": 1,
+                "to": 1,
+                "mparticl": 1,
+                "zeotap": 1
+              }
+            },
+            "featuresToIntent": {
+              "how": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "lytics.buildAudience",
+                "zeotap.integrateData",
+                "cross.compare"
+              ],
+              "do": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "lytics.buildAudience"
+              ],
+              "i": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "lytics.buildAudience",
+                "zeotap.integrateData"
+              ],
+              "set": [
+                "segment.setupSource",
+                "segment.advanced",
+                "lytics.advanced",
+                "zeotap.advanced"
+              ],
+              "up": [
+                "segment.setupSource"
+              ],
+              "a": [
+                "segment.setupSource",
+                "mparticle.createUser"
+              ],
+              "new": [
+                "segment.setupSource"
+              ],
+              "sourc": [
+                "segment.setupSource"
+              ],
+              "in": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "lytics.buildAudience"
+              ],
+              "segment": [
+                "segment.setupSource",
+                "lytics.buildAudience",
+                "segment.advanced",
+                "cross.compare"
+              ],
+              "setup": [
+                "segment.setupSource"
+              ],
+              "can": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "zeotap.integrateData"
+              ],
+              "creat": [
+                "mparticle.createUser",
+                "lytics.buildAudience"
+              ],
+              "user": [
+                "mparticle.createUser"
+              ],
+              "profil": [
+                "mparticle.createUser"
+              ],
+              "mparticl": [
+                "mparticle.createUser",
+                "mparticle.advanced",
+                "cross.compare"
+              ],
+              "build": [
+                "lytics.buildAudience"
+              ],
+              "an": [
+                "lytics.buildAudience"
+              ],
+              "audienc": [
+                "lytics.buildAudience"
+              ],
+              "lytic": [
+                "lytics.buildAudience",
+                "lytics.advanced",
+                "cross.compare"
+              ],
+              "integr": [
+                "zeotap.integrateData",
+                "mparticle.advanced"
+              ],
+              "my": [
+                "zeotap.integrateData"
+              ],
+              "data": [
+                "zeotap.integrateData"
+              ],
+              "with": [
+                "zeotap.integrateData"
+              ],
+              "zeotap": [
+                "zeotap.integrateData",
+                "zeotap.advanced",
+                "cross.compare"
+              ],
+              "advanc": [
+                "segment.advanced",
+                "mparticle.advanced",
+                "lytics.advanced",
+                "zeotap.advanced"
+              ],
+              "configur": [
+                "segment.advanced",
+                "mparticle.advanced",
+                "lytics.advanced",
+                "zeotap.advanced"
+              ],
+              "compar": [
+                "cross.compare"
+              ],
+              "and": [
+                "cross.compare"
+              ],
+              "doe": [
+                "cross.compare"
+              ],
+              "to": [
+                "cross.compare"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "how",
+                "do",
+                "i",
+                "set",
+                "up",
+                "a",
+                "new",
+                "sourc",
+                "in",
+                "segment",
+                "setup",
+                "can",
+                "creat",
+                "user",
+                "profil",
+                "mparticl",
+                "build",
+                "an",
+                "audienc",
+                "lytic",
+                "integr",
+                "my",
+                "data",
+                "with",
+                "zeotap",
+                "advanc",
+                "configur",
+                "compar",
+                "and",
+                "doe",
+                "to"
+              ],
+              "intents": [
+                "segment.setupSource",
+                "mparticle.createUser",
+                "lytics.buildAudience",
+                "zeotap.integrateData",
+                "segment.advanced",
+                "mparticle.advanced",
+                "lytics.advanced",
+                "zeotap.advanced",
+                "cross.compare"
+              ],
+              "perceptrons": [
+                [
+                  -0.13894803822040558,
+                  -0.4390386939048767,
+                  -0.04917212203145027,
+                  0.38390833139419556,
+                  2.126765251159668,
+                  0.9634271860122681,
+                  0.8320446610450745,
+                  5.80451774597168,
+                  2.8932855129241943,
+                  1.8293343782424927,
+                  3.6777892112731934,
+                  0.389920711517334,
+                  -1.5007963180541992,
+                  -1.2490501403808594,
+                  -0.7199088335037231,
+                  -1.2490501403808594,
+                  -1.385359764099121,
+                  -0.6266581416130066,
+                  -1.5986738204956055,
+                  -1.820939540863037,
+                  -0.1781756430864334,
+                  -0.1678190380334854,
+                  -0.1781756430864334,
+                  -0.1781756430864334,
+                  -0.3188357353210449,
+                  -2.294313430786133,
+                  -0.49187248945236206,
+                  -0.2069716602563858,
+                  -0.11351727694272995,
+                  -0.06868983060121536,
+                  -0.06868983060121536,
+                  0.08131644973885074
+                ],
+                [
+                  0.11403421312570572,
+                  1.1447077989578247,
+                  0.11403421312570572,
+                  -0.6825677752494812,
+                  -0.6769187450408936,
+                  0.8521515130996704,
+                  -0.4058881402015686,
+                  -0.7278861999511719,
+                  2.0496230125427246,
+                  -2.3026421070098877,
+                  -0.024757446721196175,
+                  -1.0290921926498413,
+                  3.454638719558716,
+                  4.344624042510986,
+                  2.2203078269958496,
+                  2.3306820392608643,
+                  -0.48626431822776794,
+                  -0.3260977864265442,
+                  -1.532065987586975,
+                  -1.532065987586975,
+                  -0.8395310044288635,
+                  -0.167825847864151,
+                  -0.22650451958179474,
+                  -0.22650451958179474,
+                  -0.9272394776344299,
+                  -1.392818570137024,
+                  -0.8004416823387146,
+                  -0.6345611810684204,
+                  -0.6345611810684204,
+                  0,
+                  0,
+                  -0.13260399500930758
+                ],
+                [
+                  -0.9796931147575378,
+                  0.19840215146541595,
+                  -0.25686657428741455,
+                  -1.1783499717712402,
+                  -0.537822961807251,
+                  -1.0310816764831543,
+                  -0.3657940924167633,
+                  -1.9009071588516235,
+                  2.5862035751342773,
+                  1.2113442420959473,
+                  -1.2978663444519043,
+                  -0.4064956307411194,
+                  2.147376775741577,
+                  -1.4194700717926025,
+                  -1.1797144412994385,
+                  -1.4749585390090942,
+                  2.344143867492676,
+                  0.8987398147583008,
+                  5.909836769104004,
+                  2.9828481674194336,
+                  -0.227128267288208,
+                  -0.04943734407424927,
+                  -0.1909152865409851,
+                  -0.1909152865409851,
+                  -0.1909152865409851,
+                  -1.5039429664611816,
+                  -0.8484446406364441,
+                  -2.1382944583892822,
+                  -1.415467381477356,
+                  -0.6231443285942078,
+                  -0.6231443285942078,
+                  -0.6363581600958936
+                ],
+                [
+                  -0.16218478977680206,
+                  -0.10854319483041763,
+                  -0.09172571450471878,
+                  -0.7348053455352783,
+                  -0.09375239908695221,
+                  -0.21754293143749237,
+                  -0.039358027279376984,
+                  -0.13191314041614532,
+                  -0.32465222477912903,
+                  -0.5021888017654419,
+                  -0.023225821554660797,
+                  0.035999201238155365,
+                  -0.09175808727741241,
+                  -0.09175808727741241,
+                  -0.06782334297895432,
+                  -1.5511177778244019,
+                  -0.042025234550237656,
+                  -0.042025234550237656,
+                  -0.042025234550237656,
+                  -0.23570828139781952,
+                  3.2698450088500977,
+                  0.218024343252182,
+                  4.074625015258789,
+                  4.074625015258789,
+                  2.4339635372161865,
+                  -2.151276111602783,
+                  -0.715361475944519,
+                  -0.7015114426612854,
+                  -0.6309679746627808,
+                  -0.04466382414102554,
+                  -0.04466382414102554,
+                  0.4326019932231093
+                ],
+                [
+                  -1.1806241273880005,
+                  -0.48216211795806885,
+                  -0.8660735487937927,
+                  1.8743932247161865,
+                  -0.8660735487937927,
+                  -0.8660735487937927,
+                  -0.48216211795806885,
+                  -3.077883720397949,
+                  -3.3700690269470215,
+                  9.623917579650879,
+                  -2.211442232131958,
+                  -0.36914393305778503,
+                  -0.11867508292198181,
+                  0,
+                  0,
+                  -4.247689723968506,
+                  -0.1621367186307907,
+                  0,
+                  -0.28728705644607544,
+                  -4.934534072875977,
+                  -0.7642004489898682,
+                  0,
+                  0,
+                  0,
+                  -4.533181190490723,
+                  3.6158485412597656,
+                  1.6927320957183838,
+                  -2.0292670726776123,
+                  -1.7147170305252075,
+                  -0.31265774369239807,
+                  -0.31265774369239807,
+                  -0.8987892581035521
+                ],
+                [
+                  -0.58708256483078,
+                  -0.2426319420337677,
+                  -0.5787723064422607,
+                  -1.2221366167068481,
+                  -0.006061341147869825,
+                  -0.5787723064422607,
+                  -0.006061341147869825,
+                  -0.029280178248882294,
+                  -2.202268362045288,
+                  -3.9184823036193848,
+                  -0.01867283135652542,
+                  -0.2866634130477905,
+                  -2.163886070251465,
+                  -2.163886070251465,
+                  -1.9284623861312866,
+                  9.097936630249023,
+                  0,
+                  0,
+                  0,
+                  -4.016383171081543,
+                  2.8769307136535645,
+                  0,
+                  -0.1977306753396988,
+                  -0.1977306753396988,
+                  -4.319930553436279,
+                  3.339552879333496,
+                  1.5137346982955933,
+                  -2.064150810241699,
+                  -2.055840492248535,
+                  -0.0041551957838237286,
+                  -0.0041551957838237286,
+                  -0.5694819645870093
+                ],
+                [
+                  -0.7715477347373962,
+                  -0.19567011296749115,
+                  -0.24470801651477814,
+                  1.9818859100341797,
+                  -0.0893045961856842,
+                  -0.0893045961856842,
+                  -0.04305753484368324,
+                  -0.1036846861243248,
+                  -1.6562608480453491,
+                  -5.386366844177246,
+                  -0.0024104733020067215,
+                  -0.02471829019486904,
+                  -0.7423004508018494,
+                  -0.01981857232749462,
+                  -0.01981857232749462,
+                  -4.085683822631836,
+                  -0.7729136347770691,
+                  -0.11493723839521408,
+                  -1.4854168891906738,
+                  9.693843841552734,
+                  -0.69605553150177,
+                  0,
+                  -0.00035557884257286787,
+                  -0.00035557884257286787,
+                  -4.657132625579834,
+                  3.0601749420166016,
+                  1.6525542736053467,
+                  -2.184135675430298,
+                  -1.695282220840454,
+                  -0.4880795180797577,
+                  -0.4880795180797577,
+                  -0.3931475894459439
+                ],
+                [
+                  -0.4657823145389557,
+                  -0.0442388653755188,
+                  -0.42140695452690125,
+                  1.868952751159668,
+                  -0.08260849118232727,
+                  -0.100453682243824,
+                  -0.0442388653755188,
+                  -0.13032831251621246,
+                  -0.20308296382427216,
+                  -4.553370952606201,
+                  -0.030927030369639397,
+                  -0.3528456389904022,
+                  -0.04578956589102745,
+                  -0.03894834220409393,
+                  -0.03894834220409393,
+                  -4.451744079589844,
+                  -0.005836492870002985,
+                  0,
+                  -0.010558221489191055,
+                  -4.526679039001465,
+                  -3.0719010829925537,
+                  -0.2979218065738678,
+                  -2.8510847091674805,
+                  -2.8510847091674805,
+                  9.643721580505371,
+                  3.5676796436309814,
+                  1.8155806064605713,
+                  -2.1908082962036133,
+                  -2.1463894844055176,
+                  -0.022209355607628822,
+                  -0.022209355607628822,
+                  -0.8445150540588973
+                ],
+                [
+                  0.6666184663772583,
+                  -0.5817634463310242,
+                  -1.0936750173568726,
+                  -0.8954282999038696,
+                  -0.22893935441970825,
+                  -0.4431459307670593,
+                  -0.10166773200035095,
+                  -0.5461381077766418,
+                  -2.1816041469573975,
+                  1.385111927986145,
+                  -0.2063099443912506,
+                  -0.39850446581840515,
+                  -0.6585659384727478,
+                  -0.2510181963443756,
+                  -0.18577928841114044,
+                  1.6486468315124512,
+                  -0.8265339136123657,
+                  -0.32488688826560974,
+                  -1.2610270977020264,
+                  1.76742422580719,
+                  -0.8874523043632507,
+                  -0.14189545810222626,
+                  -0.7156069278717041,
+                  -0.7156069278717041,
+                  1.5130547285079956,
+                  -1.6316559314727783,
+                  -0.9068341255187988,
+                  6.087316513061523,
+                  4.277762413024902,
+                  1.80967378616333,
+                  1.80967378616333,
+                  0.761618037407749
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "how do I set up a new source in segment"
+      ],
+      [
+        "en",
+        "setup source in segment"
+      ],
+      [
+        "en",
+        "how can I set up a source in segment"
+      ],
+      [
+        "en",
+        "how can I create a user profile in mparticle"
+      ],
+      [
+        "en",
+        "create user profile in mparticle"
+      ],
+      [
+        "en",
+        "how do I create a user in mparticle"
+      ],
+      [
+        "en",
+        "how do I build an audience segment in lytics"
+      ],
+      [
+        "en",
+        "build audience segment in lytics"
+      ],
+      [
+        "en",
+        "create audience segment in lytics"
+      ],
+      [
+        "en",
+        "how can I integrate my data with zeotap"
+      ],
+      [
+        "en",
+        "integrate data with zeotap"
+      ],
+      [
+        "en",
+        "data integration with zeotap"
+      ],
+      [
+        "en",
+        "advanced segment configuration"
+      ],
+      [
+        "en",
+        "segment advanced settings"
+      ],
+      [
+        "en",
+        "advanced mparticle integrations"
+      ],
+      [
+        "en",
+        "mparticle advanced configuration"
+      ],
+      [
+        "en",
+        "advanced lytics configurations"
+      ],
+      [
+        "en",
+        "lytics advanced settings"
+      ],
+      [
+        "en",
+        "advanced zeotap settings"
+      ],
+      [
+        "en",
+        "zeotap advanced configuration"
+      ],
+      [
+        "en",
+        "compare segment and lytics"
+      ],
+      [
+        "en",
+        "how does segment compare to lytics"
+      ],
+      [
+        "en",
+        "compare mparticle and zeotap"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "segment.setupSource": [
+          {
+            "answer": "To set up a new source in Segment, first navigate to the Sources tab, click on 'Add Source', select your source type, and follow the configuration steps. For more details, please refer to the Segment Documentation."
+          }
+        ],
+        "mparticle.createUser": [
+          {
+            "answer": "To create a user profile in mParticle, log in to your dashboard, go to the Users section, and click 'Create New User'. Fill in the required fields and save your changes."
+          }
+        ],
+        "lytics.buildAudience": [
+          {
+            "answer": "To build an audience segment in Lytics, start by selecting the Segments tab, then use the filter options to define your audience criteria. Review your segment and publish it."
+          }
+        ],
+        "zeotap.integrateData": [
+          {
+            "answer": "To integrate your data with Zeotap, navigate to the Data Integration section, choose your data source, and follow the guided setup. Detailed steps are available in the Zeotap Documentation."
+          }
+        ],
+        "segment.advanced": [
+          {
+            "answer": "For advanced configurations in Segment, you can customize tracking plans and use server-side libraries. Check the official docs for detailed examples."
+          }
+        ],
+        "mparticle.advanced": [
+          {
+            "answer": "mParticle offers advanced integrations via SDKs and REST APIs. See the documentation for instructions on configuring custom data pipelines."
+          }
+        ],
+        "lytics.advanced": [
+          {
+            "answer": "Lytics supports complex segmentation rules. For advanced use cases, combine multiple data attributes as explained in the docs."
+          }
+        ],
+        "zeotap.advanced": [
+          {
+            "answer": "Zeotap provides API-based data ingestion for enterprise scenarios. Refer to the docs for integration examples and advanced settings."
+          }
+        ],
+        "cross.compare": [
+          {
+            "answer": "Cross-CDP Comparison: Each platform has a unique approach. For example, Segment focuses on real-time data routing, whereas Lytics emphasizes audience segmentation. Please specify which aspects you wish to compare."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
